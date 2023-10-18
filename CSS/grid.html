@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: #ff0000;
+        overflow: auto;
+        flex-grow: 1;
+        overflow: auto;
+      }
+      div {
+        background-color: #0000ff;
+        border: 1px solid #000000;
+        padding: 50px;
+        margin: 10px;
+        border-radius: 30px 10px 0 0;
+        color: white;
+        height: 100px;
+      }
+      h1 {
+        color: #ff0000;
+        font-size: 50px;
+        text-align: center;
+        text-decoration: underline;
+      }
+      a {
+        color: #00ff00;
+        font-size: 30px;
+        text-decoration: none;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        height: 100px;
+      }
+      header {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header style="color: #ff0000; background-color: #00ff00">Header</header>
+    <main>
+      <div id="first">div1</div>
+      <div class="special">div2</div>
+      <div>div3</div>
+      <div id="first">div1</div>
+      <div class="special">div2</div>
+      <div>div3</div>
+    </main>
+    <footer>Footer</footer>
+  </body>
+</html>
