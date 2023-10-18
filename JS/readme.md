@@ -13,6 +13,7 @@ JavaScript is a programming language that is commonly used to create interactive
 - [Arrays](#arrays)
 - [Objects](#objects)
 - [DOM](#dom)
+- [Resources](#resources)
 
 ## Variables
 
@@ -700,3 +701,11 @@ Elements can be replaced using the `replaceChild()` method.
 document.querySelector("div").replaceChild("h1");
 document.querySelectorAll("p").replaceChild("span");
 ```
+
+## Resources
+
+- [Public apis](https://apipheny.io/free-api/#apis-without-key)
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [W3Schools](https://www.w3schools.com/js/default.asp)
+- [JavaScript.info](https://javascript.info/)
+- [You dont know JS](https://github.com/getify/You-Dont-Know-JS)
