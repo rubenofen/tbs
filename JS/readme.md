@@ -21,7 +21,7 @@ Variables are used to store information to be referenced and manipulated in a co
 
 ### Declaration
 
-Variables are declared with the `var`, `let`, or `const` keyword. The `var` keyword is used in pre-ES6 versions of JS. `let` and `const` were introduced in ES6 and are block-scoped. `let` is used for variables that can be reassigned, while `const` is used for variables that cannot be reassigned.
+variables are declared with the `var`, `let`, or `const` keyword. The `var` keyword is used in pre-ES6 versions of JS. `let` and `const` were introduced in ES6 and are block-scoped. `let` is used for variables that can be reassigned, while `const` is used for variables that cannot be reassigned.
 
 ```js
 var myName = "John";
@@ -34,7 +34,7 @@ const myBirthday = "01/01/1990";
 Variables are assigned with the `=` operator. The variable to the left of the `=` is the name of the variable, while the value to the right of the `=` is the value stored in the variable.
 
 ```js
-var myName = "John";
+let myName = "John";
 ```
 
 ### Initialization
@@ -42,7 +42,7 @@ var myName = "John";
 Variables can be declared and assigned in the same step. This is called initialization.
 
 ```js
-var myName = "John";
+let myName = "John";
 ```
 
 ### Reassignment
@@ -50,7 +50,7 @@ var myName = "John";
 Variables can be reassigned after they are declared and assigned.
 
 ```js
-var myName = "John";
+let myName = "John";
 myName = "Jane";
 ```
 
@@ -72,7 +72,7 @@ Variables declared with the `var` keyword are hoisted to the top of the function
 
 ```js
 console.log(myName); // undefined
-var myName = "John";
+let myName = "John";
 
 console.log(myAge); // ReferenceError: myAge is not defined
 let myAge = 30;
@@ -87,10 +87,10 @@ Data types are the classifications we give to the different kinds of data that w
 The `number` data type is used to represent positive or negative numbers with or without decimal places, or numbers written using exponential notation.
 
 ```js
-var myAge = 30;
-var pi = 3.14;
-var gravity = -9.81;
-var million = 1e6;
+let myAge = 30;
+let pi = 3.14;
+let gravity = -9.81;
+let million = 1e6;
 ```
 
 ### String
@@ -98,8 +98,8 @@ var million = 1e6;
 The `string` data type is used to represent textual data. Strings are created with single or double quotes surrounding one or more characters.
 
 ```js
-var myName = "John";
-var myCity = "New York";
+let myName = "John";
+let myCity = "New York";
 ```
 
 ### Boolean
@@ -107,8 +107,8 @@ var myCity = "New York";
 The `boolean` data type is used to represent logical values. It can only have two possible values: `true` or `false`.
 
 ```js
-var isTall = true;
-var isMale = false;
+let isTall = true;
+let isMale = false;
 ```
 
 ### Null
@@ -116,15 +116,15 @@ var isMale = false;
 The `null` data type is used to represent a non-existent or invalid value.
 
 ```js
-var myName = null;
+let myName = null;
 ```
 
 ### Undefined
 
-The `undefined` data type is used to represent a declared variable that has not been assigned a value.
+The `undefined` data type is used to represent a declared letiable that has not been assigned a value.
 
 ```js
-var myName;
+let myName;
 ```
 
 ### Symbol
@@ -132,7 +132,7 @@ var myName;
 The `symbol` data type is used to represent a unique identifier.
 
 ```js
-var mySymbol = Symbol();
+let mySymbol = Symbol();
 ```
 
 ### Object
@@ -140,7 +140,7 @@ var mySymbol = Symbol();
 The `object` data type is used to represent a collection of related data.
 
 ```js
-var myObject = {
+const myObject = {
   name: "John",
   age: 30,
 };
@@ -152,10 +152,10 @@ Operators are used to perform operations on variables and values. JavaScript has
 
 ### Assignment
 
-The assignment operator (`=`) assigns a value to a variable.
+The assignment operator (`=`) assigns a value to a letiable.
 
 ```js
-var myName = "John";
+let myName = "John";
 ```
 
 ### Arithmetic
@@ -163,8 +163,8 @@ var myName = "John";
 Arithmetic operators perform arithmetic on numbers.
 
 ```js
-var x = 10;
-var y = 5;
+let x = 10;
+let y = 5;
 
 console.log(x + y); // 15
 console.log(x - y); // 5
@@ -175,8 +175,8 @@ console.log(x--); // 11
 console.log(++x); // 11
 console.log(--x); // 10
 
-var x = 10;
-var y = 5;
+let x = 10;
+let y = 5;
 
 console.log(x % y); // 0
 console.log(x ** y); // 100000
@@ -187,8 +187,8 @@ console.log(x ** y); // 100000
 Comparison operators compare two values and return a boolean value.
 
 ```js
-var x = 10;
-var y = 5;
+let x = 10;
+let y = 5;
 
 console.log(x == y); // false
 console.log(x === y); // false
@@ -205,8 +205,8 @@ console.log(x <= y); // false
 Logical operators are used to determine the logic between variables or values.
 
 ```js
-var x = 10;
-var y = 5;
+let x = 10;
+let y = 5;
 
 console.log(x > 5 && y < 10); // true
 console.log(x > 5 || y < 10); // true
@@ -218,8 +218,8 @@ console.log(!(x > 5 && y < 10)); // false
 Bitwise operators perform bitwise operations on numbers.
 
 ```js
-var x = 10;
-var y = 5;
+let x = 10;
+let y = 5;
 
 console.log(x & y); // 0
 console.log(x | y); // 15
@@ -239,7 +239,7 @@ Conditional statements are used to perform different actions based on different 
 The `if` statement executes a statement if a specified condition is truthy. If the condition is falsy, another statement can be executed using the `else` statement.
 
 ```js
-var myAge = 30;
+let myAge = 30;
 
 if (myAge >= 18) {
   console.log("You are an adult.");
@@ -253,7 +253,7 @@ if (myAge >= 18) {
 The `else if` statement executes a statement if a specified condition is truthy. If the condition is falsy, another statement can be executed using the `else` statement. The `else if` statement is used to specify a new condition if the first condition is falsy.
 
 ```js
-var myAge = 30;
+let myAge = 30;
 
 if (myAge < 18) {
   console.log("You are a minor.");
@@ -269,7 +269,7 @@ if (myAge < 18) {
 The `switch` statement evaluates an expression and executes a statement based on the value of the expression. The `break` keyword is used to terminate a case in the `switch` statement. If the `break` keyword is omitted, the next case in the `switch` statement will be executed.
 
 ```js
-var myAge = 30;
+let myAge = 30;
 
 switch (myAge) {
   case 18:
@@ -285,11 +285,11 @@ switch (myAge) {
 
 ### Ternary
 
-The ternary operator (`?:`) assigns a value to a variable based on a condition. It is the only JavaScript operator that takes three operands. The operands are separated by a question mark (`?`) and a colon (`:`).
+The ternary operator (`?:`) assigns a value to a letiable based on a condition. It is the only JavaScript operator that takes three operands. The operands are separated by a question mark (`?`) and a colon (`:`).
 
 ```js
-var myAge = 30;
-var isAdult = myAge >= 18 ? true : false;
+let myAge = 30;
+let isAdult = myAge >= 18 ? true : false;
 ```
 
 ## Loops
@@ -301,7 +301,7 @@ Loops are used to execute the same block of code a specified number of times or 
 The `for` loop repeats a block of code a specified number of times.
 
 ```js
-for (var i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
   console.log(i);
 }
 ```
@@ -311,12 +311,12 @@ for (var i = 0; i < 10; i++) {
 The `for...in` loop iterates over the properties of an object.
 
 ```js
-var myObject = {
+const myObject = {
   name: "John",
   age: 30,
 };
 
-for (var key in myObject) {
+for (let key in myObject) {
   console.log(key + ": " + myObject[key]);
 }
 ```
@@ -326,9 +326,9 @@ for (var key in myObject) {
 The `for...of` loop iterates over the values of an iterable object.
 
 ```js
-var myArray = [1, 2, 3];
+const myArray = [1, 2, 3];
 
-for (var value of myArray) {
+for (let value of myArray) {
   console.log(value);
 }
 ```
@@ -338,7 +338,7 @@ for (var value of myArray) {
 The `while` loop executes a block of code while a specified condition is true.
 
 ```js
-var i = 0;
+let i = 0;
 
 while (i < 10) {
   console.log(i);
@@ -351,7 +351,7 @@ while (i < 10) {
 The `do...while` loop executes a block of code while a specified condition is true. The block of code is executed once before the condition is checked.
 
 ```js
-var i = 0;
+let i = 0;
 
 do {
   console.log(i);
@@ -378,7 +378,7 @@ function myFunction() {
 Anonymous functions are declared without a name.
 
 ```js
-var myFunction = function () {
+cosnt myFunction = function () {
   console.log("Hello World!");
 };
 ```
@@ -388,21 +388,21 @@ var myFunction = function () {
 Arrow functions are a shorter syntax for writing function expressions. They are declared with the `=>` syntax.
 
 ```js
-var myFunction = () => {
+const myFunction = () => {
   console.log("Hello World!");
 };
 ```
 
 ## Arrays
 
-Arrays are used to store multiple values in a single variable. In JavaScript, arrays can store different data types and are zero-indexed. JavaScript arrays are also dynamic, so they can be resized.
+Arrays are used to store multiple values in a single letiable. In JavaScript, arrays can store different data types and are zero-indexed. JavaScript arrays are also dynamic, so they can be resized.
 
 ### Declaration
 
 Arrays are declared with square brackets (`[]`).
 
 ```js
-var myArray = [];
+const myArray = [];
 ```
 
 ### Initialization
@@ -410,7 +410,7 @@ var myArray = [];
 Arrays can be initialized when they are declared.
 
 ```js
-var myArray = [1, 2, 3];
+const myArray = [1, 2, 3];
 ```
 
 ### Accessing Elements
@@ -418,7 +418,7 @@ var myArray = [1, 2, 3];
 Array elements are accessed with bracket notation (`[]`) and their index.
 
 ```js
-var myArray = [1, 2, 3];
+const myArray = [1, 2, 3];
 
 console.log(myArray[0]); // 1
 console.log(myArray[1]); // 2
@@ -430,7 +430,7 @@ console.log(myArray[2]); // 3
 Array elements are modified with bracket notation (`[]`) and their index.
 
 ```js
-var myArray = [1, 2, 3];
+const myArray = [1, 2, 3];
 
 myArray[0] = 4;
 myArray[1] = 5;
@@ -444,7 +444,7 @@ console.log(myArray); // [4, 5, 6]
 The length of an array is accessed with the `length` property.
 
 ```js
-var myArray = [1, 2, 3];
+const myArray = [1, 2, 3];
 
 console.log(myArray.length); // 3
 ```
@@ -454,9 +454,9 @@ console.log(myArray.length); // 3
 Arrays can be iterated using a `for` loop.
 
 ```js
-var myArray = [1, 2, 3];
+const myArray = [1, 2, 3];
 
-for (var i = 0; i < myArray.length; i++) {
+for (let i = 0; i < myArray.length; i++) {
   console.log(myArray[i]);
 }
 ```
@@ -466,7 +466,7 @@ for (var i = 0; i < myArray.length; i++) {
 Arrays have many useful methods that can be used to modify their contents.
 
 ```js
-var myArray = [1, 2, 3];
+const myArray = [1, 2, 3];
 
 myArray.push(4); // [1, 2, 3, 4]
 myArray.pop(); // [1, 2, 3]
@@ -481,14 +481,14 @@ myArray.sort(); // [1, 2, 3]
 
 ## Objects
 
-Objects are used to store multiple values in a single variable. In JavaScript, objects can store different data types and are accessed using keys. JavaScript objects are also dynamic, so they can be resized.
+Objects are used to store multiple values in a single letiable. In JavaScript, objects can store different data types and are accessed using keys. JavaScript objects are also dynamic, so they can be resized.
 
 ### Declaration
 
 Objects are declared with curly braces (`{}`).
 
 ```js
-var myObject = {};
+const myObject = {};
 ```
 
 ### Initialization
@@ -496,7 +496,7 @@ var myObject = {};
 Objects can be initialized when they are declared.
 
 ```js
-var myObject = {
+const myObject = {
   name: "John",
   age: 30,
 };
@@ -507,7 +507,7 @@ var myObject = {
 Object properties could be accessed with bracket notation (`[]`) and their key.
 
 ```js
-var myObject = {
+const myObject = {
   name: "John",
   age: 30,
 };
@@ -519,7 +519,7 @@ console.log(myObject["age"]); // 30
 Object properties could also be accessed with dot notation (`.`) and their key.
 
 ```js
-var myObject = {
+const myObject = {
   name: "John",
   age: 30,
 };
@@ -533,7 +533,7 @@ console.log(myObject.age); // 30
 Object properties could be modified with bracket notation (`[]`) and their key.
 
 ```js
-var myObject = {
+const myObject = {
   name: "John",
   age: 30,
 };
@@ -547,7 +547,7 @@ console.log(myObject); // { name: 'Jane', age: 25 }
 Object properties could also be modified with dot notation (`.`) and their key.
 
 ```js
-var myObject = {
+const myObject = {
   name: "John",
   age: 30,
 };
@@ -563,7 +563,7 @@ console.log(myObject); // { name: 'Jane', age: 25 }
 Objects have many useful methods that can be used to modify their contents.
 
 ```js
-var myObject = {
+const myObject = {
   name: "John",
   age: 30,
 };
