@@ -84,7 +84,45 @@
       <div id="first">div1</div>
       <div class="special">div2</div>
       <div>div3</div>
+      <input id="theName" type="text" />
+      <button onclick="fetchACatFact()">Check</button>
+      <div id="response"></div>
     </main>
     <footer>Footer</footer>
   </body>
+  <script>
+    function checkAge(age) {
+      const ADULT_BREAK = 18;
+      const SENIOR_BREAK = 65;
+      if (age < ADULT_BREAK) {
+        console.log("You are a minor.");
+      } else if (age >= ADULT_BREAK && age < SENIOR_BREAK) {
+        console.log("You are an adult.");
+      } else {
+        console.log("You are a senior citizen.");
+      }
+    }
+
+    function checkIfTeacher() {
+      const name = document.getElementById("theName").value;
+      if (name.toLowerCase().trim() == "ruben") {
+        document.getElementById("response").innerHTML =
+          "<h2>You are a teacher</h2>";
+      } else {
+        document.getElementById("response").innerHTML =
+          "<h2>You are a student</h2>";
+      }
+    }
+
+    function fetchACatFact() {
+      /* fecth from https://catfact.ninja/fact data and take 
+      the fact and display it in the div with id="response" */
+
+      fetch("https://catfact.ninja/fact")
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("response").innerHTML = data.fact;
+        });
+    }
+  </script>
 </html>
